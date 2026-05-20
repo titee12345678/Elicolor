@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datacolor vs Elicolor — Spectro Comparison</title>
+<meta name="description" content="เปรียบเทียบระบบ Spectrophotometer Datacolor และ Elicolor สำหรับงานย้อมสี Textile">
+<script>
+(() => {
+  try {
+    document.documentElement.dataset.theme = localStorage.getItem('colorMode') || 'light';
+  } catch {
+    document.documentElement.dataset.theme = 'light';
+  }
+})();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-link active">หน้าแรก</a>
+    <a href="#calibrate" class="nav-link">Calibrate</a>
+    <a href="#database" class="nav-link">Database</a>
+    <a href="#matching" class="nav-link">Matching</a>
+    <a href="#topping" class="nav-link">Topping</a>
+    <a href="#proscons" class="nav-link">ข้อดี-เสีย</a>
+    <a href="#cost" class="nav-link">ต้นทุน</a>
+  </div>
+</nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+  <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+  <span class="theme-toggle-text">Light</span>
+</button>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-badge"><span class="dot"></span> Textile Color Matching System Comparison</div>
+  <h1><span class="dc">Datacolor</span><span class="vs">VS</span><span class="eli">Elicolor</span></h1>
+  <p class="hero-sub">เปรียบเทียบระบบ Spectrophotometer ทั้ง 2 ระบบอย่างละเอียด เพื่อประกอบการตัดสินใจนำ Elicolor มาใช้เพิ่มเติม</p>
+  <div class="hero-cta">
+    <a href="#calibrate" class="btn btn-primary">▼ ดูการเปรียบเทียบ</a>
+    <a href="#cost" class="btn btn-outline">💰 ดูต้นทุน</a>
+  </div>
+</section>
+
+<!-- CALIBRATE -->
+<section class="section" id="calibrate">
+  <div class="section-header aos">
+    <span class="section-tag">01 — Calibrate</span>
+    <h2 class="section-title">การ Calibrate เครื่อง</h2>
+    <p class="section-desc">เปรียบเทียบขั้นตอนและความสะดวกในการ Calibrate เครื่องทั้ง 2 ระบบ</p>
+  </div>
+  <div class="vs-container aos">
+    <div class="vs-panel dc-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="datacolor.png" alt="Datacolor" class="system-logo"></div>
+        <div><div class="system-name">Datacolor Spectro</div><div class="system-sub">ระบบเดิมที่ใช้อยู่</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🔗</span> การเชื่อมต่อ</div><div class="card-body">เชื่อมต่อผ่าน LAN วงใน ไม่ต้องเชื่อมต่ออินเตอร์เน็ต</div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">⏱</span> ระยะเวลา Calibrate</div><div class="card-body">Calibrate 1 ครั้ง ใช้งานได้ <strong>8 ชั่วโมง</strong></div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">📦</span> อุปกรณ์</div><div class="card-body">อุปกรณ์ Calibrate เป็นกล่องแยกจากตัวเครื่อง</div></div>
+    </div>
+    <div class="vs-divider"><div class="vs-badge">VS</div></div>
+    <div class="vs-panel eli-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="elicolor.jpg" alt="Elicolor" class="system-logo"></div>
+        <div><div class="system-name">Elicolor Spectro</div><div class="system-sub">ระบบใหม่ที่ประเมิน</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">☁️</span> การเชื่อมต่อ</div><div class="card-body">เชื่อมต่อระบบผ่าน Data ของ <strong>Cloud</strong> โดยใช้อินเตอร์เน็ต</div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">⏱</span> ระยะเวลา Calibrate</div><div class="card-body">Calibrate 1 ครั้ง ใช้งานได้<strong>ตลอด</strong> จนกว่าเครื่องจะร้อน</div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">📦</span> อุปกรณ์</div><div class="card-body">อุปกรณ์ Calibrate <strong>ติดกับตัวเครื่อง</strong> สะดวกต่อการใช้งาน</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DATABASE -->
+<section class="section" id="database">
+  <div class="section-header aos">
+    <span class="section-tag">02 — Database</span>
+    <h2 class="section-title">การทำ Database สี</h2>
+    <p class="section-desc">เปรียบเทียบขั้นตอนการสร้างฐานข้อมูลสี และความสะดวกในการใช้งาน</p>
+  </div>
+  <div class="vs-container aos">
+    <div class="vs-panel dc-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="datacolor.png" alt="Datacolor" class="system-logo"></div>
+        <div><div class="system-name">Datacolor</div><div class="system-sub">Database สี</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🎨</span> จำนวนเฉดสี</div><div class="card-body">การสร้าง Database 1 สี ต้องใช้ <strong>10 เฉดสี</strong> ถึงจะสร้างฐานข้อมูลได้</div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">📝</span> การกรอกข้อมูล</div><div class="card-body">ต้องกรอกข้อมูลเส้นด้าย<strong>แยกในแต่ละเมนู</strong> — ขั้นตอนซับซ้อน</div></div>
+    </div>
+    <div class="vs-divider"><div class="vs-badge">VS</div></div>
+    <div class="vs-panel eli-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="elicolor.jpg" alt="Elicolor" class="system-logo"></div>
+        <div><div class="system-name">Elicolor</div><div class="system-sub">Database สี</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🎨</span> จำนวนเฉดสี</div><div class="card-body">การสร้าง Database 1 สี ใช้เพียง <strong>3 เฉด</strong> — ลดการทำข้อมูลอีก 7 เฉด</div></div>
+      <div class="compare-card"><div class="card-title"><span class="icon">📝</span> การกรอกข้อมูล</div><div class="card-body">สร้างและใส่รายละเอียดได้ใน<strong>เมนูเดียวกัน</strong> — ลดการกรอกข้อมูลที่ซับซ้อน สะดวกต่อการใช้งาน</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHING -->
+<section class="section" id="matching">
+  <div class="section-header aos">
+    <span class="section-tag">03 — Matching</span>
+    <h2 class="section-title">การ Matching สี</h2>
+    <p class="section-desc">เปรียบเทียบวิธีการ Matching สูตรสีของทั้ง 2 ระบบ</p>
+  </div>
+  <div class="vs-container aos">
+    <div class="vs-panel dc-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="datacolor.png" alt="Datacolor" class="system-logo"></div>
+        <div><div class="system-name">Datacolor</div><div class="system-sub">Color Matching</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🔍</span> การออกสูตร</div><div class="card-body"><ul><li>ประมวลผลจากฐานข้อมูลสีจากการทำ Database</li><li>Search Recipes จากฐานข้อมูลที่บันทึก</li></ul></div></div>
+    </div>
+    <div class="vs-divider"><div class="vs-badge">VS</div></div>
+    <div class="vs-panel eli-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="elicolor.jpg" alt="Elicolor" class="system-logo"></div>
+        <div><div class="system-name">Elicolor</div><div class="system-sub">Color Matching</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🤖</span> การออกสูตร</div><div class="card-body"><ul><li>ประมวลผลจากฐานข้อมูลสี + ความแม่นยำของระบบ <strong>AI</strong></li><li>ปรับสูตรต่อจากค่า L*a*b*</li><li>ปรับสูตรจากการเพิ่ม-ลดของ %สี ที่ออก</li></ul></div></div>
+      <div class="compare-card eli-result-card">
+        <div class="card-title"><span class="icon">🏆</span> ผลทดลอง</div>
+        <div class="card-body">ผลจากการทดลอง: ใช้เครื่อง Elicolor เฉลี่ย 2–3 สูตร / 1 สี</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPPING -->
+<section class="section" id="topping">
+  <div class="section-header aos">
+    <span class="section-tag">04 — Topping</span>
+    <h2 class="section-title">การ Topping สี</h2>
+    <p class="section-desc">เปรียบเทียบกระบวนการ Topping สีของทั้ง 2 ระบบ</p>
+  </div>
+  <div class="vs-container aos">
+    <div class="vs-panel dc-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="datacolor.png" alt="Datacolor" class="system-logo"></div>
+        <div><div class="system-name">Datacolor</div><div class="system-sub">Topping</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🔬</span> การประมวลผล</div><div class="card-body"><ul><li>ประมวลผลจากฐานข้อมูลสีจากการทำ Database เทียบกับ Sample</li></ul></div></div>
+    </div>
+    <div class="vs-divider"><div class="vs-badge">VS</div></div>
+    <div class="vs-panel eli-theme">
+      <div class="system-header">
+        <div class="system-icon"><img src="elicolor.jpg" alt="Elicolor" class="system-logo"></div>
+        <div><div class="system-name">Elicolor</div><div class="system-sub">Topping</div></div>
+      </div>
+      <div class="compare-card"><div class="card-title"><span class="icon">🤖</span> การประมวลผล</div><div class="card-body"><ul><li>ประมวลผลจากฐานข้อมูลสี + ระบบ <strong>AI</strong></li><li>ปรับสูตรต่อจากค่า L*a*b*</li><li>ปรับสูตรจากการเพิ่ม-ลดของ %สี ที่ออก</li></ul></div></div>
+      <div class="compare-card eli-result-card">
+        <div class="card-title"><span class="icon">🏆</span> ผลทดลอง</div>
+        <div class="card-body">ผลจากการทดลอง: ใช้เครื่อง Elicolor เฉลี่ย 2–3 สูตร / 1 สี</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROS/CONS -->
+<section class="section" id="proscons">
+  <div class="section-header aos">
+    <span class="section-tag">05 — Summary</span>
+    <h2 class="section-title">สรุปข้อดี-ข้อเสีย Elicolor</h2>
+    <p class="section-desc">สรุปการเปรียบเทียบข้อดีและข้อเสียของเครื่อง Elicolor</p>
+  </div>
+
+  <div class="full-compare-table aos" style="overflow-x:auto;">
+    <table class="cost-table" style="min-width:700px;">
+      <thead>
+        <tr><th>หัวข้อ</th><th class="dc-col">Datacolor Spectro</th><th class="eli-col">Elicolor — ข้อดี</th><th style="color:var(--accent-red)">Elicolor — ข้อเสีย</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat" rowspan="3">1. การ Calibrate</td><td class="baseline-cell">เชื่อมต่อผ่าน LAN วงใน ไม่ใช้อินเตอร์เน็ต</td><td class="tradeoff-cell" data-win="Cloud">เชื่อมต่อผ่าน Cloud ใช้อินเตอร์เน็ต</td><td class="risk-cell">ต้องเชื่อมต่อผ่านอินเตอร์เน็ต</td></tr>
+        <tr><td class="baseline-cell">Calibrate 1 ครั้ง ใช้ได้ 8 ชม.</td><td class="winner-cell" data-win="ใช้งานได้นานกว่า">Calibrate 1 ครั้ง ใช้ได้ตลอด จนกว่าเครื่องจะร้อน</td><td class="risk-cell">มีค่าใช้จ่าย Cloud</td></tr>
+        <tr><td class="baseline-cell">อุปกรณ์แยกจากตัวเครื่อง</td><td class="winner-cell" data-win="สะดวกกว่า">อุปกรณ์ติดกับตัวเครื่อง สะดวก</td><td class="risk-cell">ต้องอยู่ในห้องที่เย็น ไม่ร้อน</td></tr>
+        <tr><td class="cat" rowspan="2">2. Database สี</td><td class="baseline-cell">สร้าง 1 สี ต้องใช้ 10 เฉดสี</td><td class="winner-cell" data-win="ลดงาน 70%">สร้าง 1 สี ใช้เพียง 3 เฉด ลดงานอีก 7 เฉด</td><td class="empty-cell">—</td></tr>
+        <tr><td class="baseline-cell">กรอกข้อมูลแยกแต่ละเมนู</td><td class="winner-cell" data-win="ลดความซับซ้อน">ลดการกรอกข้อมูลซับซ้อน สะดวก</td><td class="empty-cell">—</td></tr>
+        <tr><td class="cat" rowspan="5">3. Matching</td><td class="baseline-cell">ออกสูตรจาก Database</td><td class="winner-cell" data-win="AI ช่วยคิดสูตร">ใช้ระบบ AI ช่วยออกสูตรสี</td><td class="risk-cell">สีด้ายที่ Oil ยังปรับไม่ได้</td></tr>
+        <tr><td class="baseline-cell">Search Recipes จากฐานข้อมูล</td><td class="winner-cell" data-win="ทางเลือกมากกว่า">ออกสูตรได้ 3 วิธี:</td><td class="empty-cell">—</td></tr>
+        <tr><td class="muted-cell">—</td><td class="method-cell">— AI ประมวลผลข้อมูลสี</td><td class="empty-cell">—</td></tr>
+        <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก L*a*b*</td><td class="empty-cell">—</td></tr>
+        <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก % ที่วัด</td><td class="empty-cell">—</td></tr>
+        <tr><td class="cat">4. Auto Adjust</td><td class="muted-cell">—</td><td class="winner-cell" data-win="Auto">ปรับสูตรอัตโนมัติ ไม่ต้องใช้คน จนกว่าจะใกล้ Sample</td><td class="empty-cell">—</td></tr>
+        <tr><td class="cat">5. ต้นทุน</td><td class="muted-cell">—</td><td class="winner-cell cost-win" data-win="ลดต้นทุน">ต้นทุนลดลงจากเดิม</td><td class="empty-cell">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pros-cons-grid aos" style="margin-top:3rem;">
+    <div class="pc-card">
+      <div class="pc-header pros">✓ ข้อดี Elicolor</div>
+      <ul class="pc-list">
+        <li>Calibrate 1 ครั้ง ใช้ได้ตลอด (ไม่จำกัด 8 ชม.)</li>
+        <li>อุปกรณ์ Calibrate ติดตัวเครื่อง สะดวก</li>
+        <li>สร้าง Database สี ใช้เพียง 3 เฉด (จาก 10)</li>
+        <li>ลดขั้นตอนการกรอกข้อมูลที่ซับซ้อน</li>
+        <li>ระบบ AI ช่วยออกสูตรสี</li>
+        <li>ออกสูตรได้ 3 วิธี (AI / L*a*b* / %สี)</li>
+        <li>ปรับสูตรอัตโนมัติโดยไม่ต้องใช้คน</li>
+        <li>ต้นทุนลดลงจากเดิม</li>
+        <li>เฉลี่ยแค่ 2–3 สูตร/สี (จาก 4 สูตร/สี)</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <div class="pc-header cons">✗ ข้อเสีย Elicolor</div>
+      <ul class="pc-list">
+        <li>ต้องเชื่อมต่อผ่านอินเตอร์เน็ตตลอด</li>
+        <li>มีค่าใช้จ่าย Cloud รายเดือน/ปี</li>
+        <li>ต้องอยู่ในห้องที่ค่อนข้างเย็น ไม่ร้อน</li>
+        <li>สีของด้ายที่ Oil ยังไม่สามารถปรับได้</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section class="section" id="cost">
+  <div class="section-header aos">
+    <span class="section-tag">06 — Cost Analysis</span>
+    <h2 class="section-title">วิเคราะห์ต้นทุน</h2>
+    <p class="section-desc">การคิดต้นทุนจากการ Matching ด้วยเครื่อง Elicolor (กรณียังไม่ Oil)<br>เส้นด้าย 30 กรัม/สูตร · อุณหภูมิ 130°C · เวลา 50 นาที · สีเข้มไม่เกิน 2% · เครื่องย้อม LD2</p>
+  </div>
+
+  <div class="stat-grid aos">
+    <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดจำนวนสูตร (4→3 สูตร/สี)</div></div>
+    <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดปริมาณสี (0.6 กรัม)</div></div>
+    <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดเส้นด้าย (30 กรัม)</div></div>
+    <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดเวลา (240 นาที)</div></div>
+    <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดน้ำ (650 ml)</div></div>
+  </div>
+
+  <div class="cost-table-wrap aos">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th colspan="2">รายละเอียด</th>
+          <th class="dc-col">Datacolor (4 สูตร/สี)</th>
+          <th class="dc-col">ปริมาณรวม</th>
+          <th class="eli-col">Elicolor (3 สูตร/สี)</th>
+          <th class="eli-col">ปริมาณรวม</th>
+          <th class="save-col">ลดลง</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat" rowspan="2">วัตถุดิบ</td><td>สี</td><td>0.6 g / สูตร</td><td>2.4 กรัม</td><td>0.6 g / สูตร</td><td>1.8 กรัม</td><td><span class="save-badge">▼ 0.6 กรัม</span></td></tr>
+        <tr><td>เส้นด้าย</td><td>30 g / สูตร</td><td>120 กรัม</td><td>30 g / สูตร</td><td>90 กรัม</td><td><span class="save-badge">▼ 30 กรัม</span></td></tr>
+        <tr><td class="cat" rowspan="2">พลังงาน</td><td>เวลา</td><td>240 นาที / สูตร</td><td>960 นาที</td><td>240 นาที / สูตร</td><td>720 นาที</td><td><span class="save-badge">▼ 240 นาที</span></td></tr>
+        <tr><td>น้ำ</td><td>650 ml / สูตร</td><td>2,600 ml</td><td>650 ml / สูตร</td><td>1,950 ml</td><td><span class="save-badge">▼ 650 ml</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:1rem;">* คิดคำนวณเฉลี่ยจากงานทดลองออกสูตร 20 รายการ</p>
+</section>
+
+<!-- VERDICT -->
+<section class="verdict-section" id="verdict">
+  <div class="verdict-card aos">
+    <div class="verdict-kicker">Final Recommendation</div>
+    <h2 class="verdict-title">🏆 สรุปผลการเปรียบเทียบ</h2>
+    <div class="verdict-headline">แนะนำให้ใช้ <span class="verdict-product">Elicolor</span> <span class="verdict-nowrap">เพิ่มเติม</span></div>
+    <p class="verdict-text">
+      ระบบ <strong>Elicolor</strong> มีจุดเด่นเหนือระบบ Datacolor ในหลายด้าน ได้แก่ การใช้ AI ช่วยออกสูตรสี, ลดจำนวนเฉดสีในการสร้าง Database, ปรับสูตรอัตโนมัติ และลดต้นทุนทั้งวัตถุดิบ เวลา และน้ำ
+    </p>
+    <div class="verdict-metrics">
+      <div class="verdict-metric"><span>AI</span><small>ช่วยออกสูตรสี</small></div>
+      <div class="verdict-metric"><span>10→3</span><small>ลดเฉด Database</small></div>
+      <div class="verdict-metric"><span>Auto</span><small>ปรับสูตรอัตโนมัติ</small></div>
+      <div class="verdict-metric"><span>-25%</span><small>ลดต้นทุนรวม</small></div>
+    </div>
+    <div class="verdict-recommend">
+      <strong>คำแนะนำ:</strong> เหมาะสำหรับนำมาใช้เพิ่มเติมจากระบบเดิม เพื่อเพิ่มประสิทธิภาพและลดต้นทุนในกระบวนการย้อมสี โดยมีข้อควรพิจารณาเรื่องการเชื่อมต่ออินเตอร์เน็ตและค่า Cloud
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Datacolor vs Elicolor Comparison Report · สร้างเพื่อประกอบการตัดสินใจ · © 2026</p>
+</footer>
+
+<script>
+// === Theme mode ===
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('.theme-toggle-icon');
+const themeText = themeToggle.querySelector('.theme-toggle-text');
+const setTheme = mode => {
+  const theme = mode === 'dark' ? 'dark' : 'light';
+  root.dataset.theme = theme;
+  themeToggle.setAttribute('aria-pressed', theme === 'dark');
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  themeIcon.textContent = theme === 'dark' ? '☾' : '☀';
+  themeText.textContent = theme === 'dark' ? 'Dark' : 'Light';
+  try { localStorage.setItem('colorMode', theme); } catch {}
+};
+setTheme(root.dataset.theme);
+themeToggle.addEventListener('click', () => {
+  setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+});
+
+// === Scroll Progress Bar ===
+const progressBar = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  progressBar.style.width = pct + '%';
+});
+
+// === Navbar scroll ===
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// === Active nav link ===
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(l => {
+    l.classList.remove('active');
+    if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+  });
+});
+
+// === AOS: section-level ===
+const aosObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.aos').forEach(el => aosObs.observe(el));
+
+// === Staggered card reveal ===
+const cardObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const cards = e.target.querySelectorAll('.compare-card');
+      cards.forEach((c, i) => {
+        setTimeout(() => {
+          c.style.transition = 'all 0.5s cubic-bezier(0.22,1,0.36,1)';
+          c.classList.add('card-visible');
+        }, i * 120);
+      });
+      cardObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.vs-container').forEach(el => cardObs.observe(el));
+
+// === Stat card reveal with counter ===
+const statObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const cards = e.target.querySelectorAll('.stat-card');
+      cards.forEach((c, i) => {
+        setTimeout(() => {
+          c.classList.add('card-visible');
+          // Animate number
+          const val = c.querySelector('.stat-value');
+          if (val) {
+            const target = parseInt(val.textContent);
+            if (!isNaN(target)) {
+              let n = 0;
+              const step = Math.max(1, Math.floor(target / 30));
+              const timer = setInterval(() => {
+                n += step;
+                if (n >= target) { n = target; clearInterval(timer); }
+                val.textContent = n + '%';
+              }, 30);
+            }
+          }
+        }, i * 150);
+      });
+      statObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.stat-grid').forEach(el => statObs.observe(el));
+
+// === Table row cascade ===
+const tableObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const rows = e.target.querySelectorAll('tbody tr');
+      rows.forEach((r, i) => {
+        setTimeout(() => r.classList.add('row-visible'), i * 80);
+      });
+      tableObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.cost-table-wrap, .full-compare-table').forEach(el => tableObs.observe(el));
+
+// === List item stagger ===
+const listObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const items = e.target.querySelectorAll('.pc-list li');
+      items.forEach((li, i) => {
+        setTimeout(() => li.classList.add('li-visible'), i * 100);
+      });
+      listObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.pc-card').forEach(el => listObs.observe(el));
+</script>
+</body>
+</html>
