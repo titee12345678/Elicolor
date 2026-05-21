@@ -1,40 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
 :root{
   color-scheme:light;
-  --bg:#f0f4f8;--bg2:#fff;--glass:rgba(255,255,255,.55);
+  --bg:#f8fafc;--bg2:#fff;--glass:rgba(255,255,255,.55);
   --text:#1a202c;--text2:#4a5568;--muted:#a0aec0;--text-muted:#a0aec0;
   --dc:#be185d;--dc-light:#fce7f3;--dc-mid:#f9a8d4;--dc-grad:linear-gradient(135deg,#ec4899,#be185d);
   --eli:#047857;--eli-light:#dcfce7;--eli-mid:#86efac;--eli-grad:linear-gradient(135deg,#34d399,#059669);
   --green:#059669;--red:#dc2626;
   --accent-eli:var(--eli);--accent-green:var(--green);--accent-red:var(--red);--bg-card:#fff;
-  --border:rgba(0,0,0,.07);--radius:18px;
-  --shadow:0 4px 24px rgba(0,0,0,.06);--shadow-lg:0 16px 48px rgba(0,0,0,.1);
-  --page-gradient:
-    radial-gradient(circle at 7% 18%,rgba(16,185,129,.18) 0 16%,transparent 31%),
-    radial-gradient(circle at 25% 78%,rgba(236,72,153,.13) 0 15%,transparent 30%),
-    radial-gradient(circle at 40% 20%,rgba(251,191,36,.13) 0 14%,transparent 29%),
-    radial-gradient(circle at 58% 72%,rgba(14,165,233,.12) 0 15%,transparent 31%),
-    radial-gradient(circle at 76% 20%,rgba(124,58,237,.11) 0 14%,transparent 29%),
-    radial-gradient(circle at 96% 76%,rgba(236,72,153,.15) 0 16%,transparent 31%),
-    linear-gradient(100deg,#ecfdf5 0%,#f7fffb 22%,#ffffff 50%,#fff8fb 78%,#fff1f7 100%);
+  --border:rgba(0,0,0,.06);--radius:18px;
+  --shadow:0 4px 24px rgba(0,0,0,.05);--shadow-lg:0 16px 48px rgba(0,0,0,.08);
+  --page-gradient: 
+    radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.07) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.07) 0px, transparent 55%),
+    radial-gradient(at 50% 100%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+    #f8fafc;
 }
 html[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#07110f;--bg2:rgba(10,18,22,.92);--glass:rgba(14,22,28,.7);
+  --bg:#0b0f19;--bg2:rgba(15,23,42,.95);--glass:rgba(15,23,42,.75);
   --text:#f8fafc;--text2:#cbd5e1;--muted:#94a3b8;--text-muted:#94a3b8;
   --dc:#f472b6;--dc-light:#4a1232;--dc-mid:#be185d;--dc-grad:linear-gradient(135deg,#f472b6,#be185d);
   --eli:#34d399;--eli-light:#0d3f32;--eli-mid:#047857;--eli-grad:linear-gradient(135deg,#34d399,#059669);
   --green:#34d399;--red:#f87171;--accent-eli:var(--eli);--accent-green:var(--green);--accent-red:var(--red);--bg-card:#0f172a;
-  --border:rgba(255,255,255,.13);
-  --shadow:0 10px 36px rgba(0,0,0,.32);--shadow-lg:0 22px 64px rgba(0,0,0,.45);
-  --page-gradient:
-    radial-gradient(circle at 7% 18%,rgba(16,185,129,.2) 0 16%,transparent 31%),
-    radial-gradient(circle at 25% 78%,rgba(236,72,153,.16) 0 15%,transparent 30%),
-    radial-gradient(circle at 40% 20%,rgba(251,191,36,.13) 0 14%,transparent 29%),
-    radial-gradient(circle at 58% 72%,rgba(14,165,233,.16) 0 15%,transparent 31%),
-    radial-gradient(circle at 76% 20%,rgba(124,58,237,.16) 0 14%,transparent 29%),
-    radial-gradient(circle at 96% 76%,rgba(236,72,153,.17) 0 16%,transparent 31%),
-    linear-gradient(100deg,#061711 0%,#111827 28%,#0f172a 50%,#181326 76%,#1a0b16 100%);
+  --border:rgba(255,255,255,.08);
+  --shadow:0 10px 36px rgba(0,0,0,.25);--shadow-lg:0 22px 64px rgba(0,0,0,.35);
+  --page-gradient: 
+    radial-gradient(at 0% 0%, rgba(244, 114, 182, 0.08) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(52, 211, 153, 0.08) 0px, transparent 55%),
+    radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.04) 0px, transparent 50%),
+    #0b0f19;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
