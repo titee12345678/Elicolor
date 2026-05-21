@@ -53,6 +53,11 @@
     <h2 class="section-title">การ Calibrate เครื่อง</h2>
     <p class="section-desc">เปรียบเทียบขั้นตอนและความสะดวกในการ Calibrate เครื่องทั้ง 2 ระบบ</p>
   </div>
+  <div class="system-switcher aos" data-active="0">
+    <button class="switcher-btn active" data-index="0">Datacolor</button>
+    <button class="switcher-btn" data-index="1">Elicolor</button>
+    <div class="switcher-slider"></div>
+  </div>
   <div class="vs-container aos">
     <div class="vs-panel dc-theme">
       <div class="system-header">
@@ -83,6 +88,11 @@
     <h2 class="section-title">การทำ Database สี</h2>
     <p class="section-desc">เปรียบเทียบขั้นตอนการสร้างฐานข้อมูลสี และความสะดวกในการใช้งาน</p>
   </div>
+  <div class="system-switcher aos" data-active="0">
+    <button class="switcher-btn active" data-index="0">Datacolor</button>
+    <button class="switcher-btn" data-index="1">Elicolor</button>
+    <div class="switcher-slider"></div>
+  </div>
   <div class="vs-container aos">
     <div class="vs-panel dc-theme">
       <div class="system-header">
@@ -110,6 +120,11 @@
     <span class="section-tag">03 — Matching</span>
     <h2 class="section-title">การ Matching สี</h2>
     <p class="section-desc">เปรียบเทียบวิธีการ Matching สูตรสีของทั้ง 2 ระบบ</p>
+  </div>
+  <div class="system-switcher aos" data-active="0">
+    <button class="switcher-btn active" data-index="0">Datacolor</button>
+    <button class="switcher-btn" data-index="1">Elicolor</button>
+    <div class="switcher-slider"></div>
   </div>
   <div class="vs-container aos">
     <div class="vs-panel dc-theme">
@@ -140,6 +155,11 @@
     <span class="section-tag">04 — Topping</span>
     <h2 class="section-title">การ Topping สี</h2>
     <p class="section-desc">เปรียบเทียบกระบวนการ Topping สีของทั้ง 2 ระบบ</p>
+  </div>
+  <div class="system-switcher aos" data-active="0">
+    <button class="switcher-btn active" data-index="0">Datacolor</button>
+    <button class="switcher-btn" data-index="1">Elicolor</button>
+    <div class="switcher-slider"></div>
   </div>
   <div class="vs-container aos">
     <div class="vs-panel dc-theme">
@@ -172,26 +192,31 @@
     <p class="section-desc">สรุปการเปรียบเทียบข้อดีและข้อเสียของเครื่อง Elicolor</p>
   </div>
 
-  <div class="full-compare-table aos" style="overflow-x:auto;">
-    <table class="cost-table" style="min-width:700px;">
-      <thead>
-        <tr><th>หัวข้อ</th><th class="dc-col">Datacolor Spectro</th><th class="eli-col">Elicolor — ข้อดี</th><th style="color:var(--accent-red)">Elicolor — ข้อเสีย</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="cat" rowspan="3">1. การ Calibrate</td><td class="baseline-cell">เชื่อมต่อผ่าน LAN วงใน ไม่ใช้อินเตอร์เน็ต</td><td class="tradeoff-cell" data-win="Cloud">เชื่อมต่อผ่าน Cloud ใช้อินเตอร์เน็ต</td><td class="risk-cell">ต้องเชื่อมต่อผ่านอินเตอร์เน็ต</td></tr>
-        <tr><td class="baseline-cell">Calibrate 1 ครั้ง ใช้ได้ 8 ชม.</td><td class="winner-cell" data-win="ใช้งานได้นานกว่า">Calibrate 1 ครั้ง ใช้ได้ตลอด จนกว่าเครื่องจะร้อน</td><td class="risk-cell">มีค่าใช้จ่าย Cloud</td></tr>
-        <tr><td class="baseline-cell">อุปกรณ์แยกจากตัวเครื่อง</td><td class="winner-cell" data-win="สะดวกกว่า">อุปกรณ์ติดกับตัวเครื่อง สะดวก</td><td class="risk-cell">ต้องอยู่ในห้องที่เย็น ไม่ร้อน</td></tr>
-        <tr><td class="cat" rowspan="2">2. Database สี</td><td class="baseline-cell">สร้าง 1 สี ต้องใช้ 10 เฉดสี</td><td class="winner-cell" data-win="ลดงาน 70%">สร้าง 1 สี ใช้เพียง 3 เฉด ลดงานอีก 7 เฉด</td><td class="empty-cell">—</td></tr>
-        <tr><td class="baseline-cell">กรอกข้อมูลแยกแต่ละเมนู</td><td class="winner-cell" data-win="ลดความซับซ้อน">ลดการกรอกข้อมูลซับซ้อน สะดวก</td><td class="empty-cell">—</td></tr>
-        <tr><td class="cat" rowspan="5">3. Matching</td><td class="baseline-cell">ออกสูตรจาก Database</td><td class="winner-cell" data-win="AI ช่วยคิดสูตร">ใช้ระบบ AI ช่วยออกสูตรสี</td><td class="risk-cell">สีด้ายที่ Oil ยังปรับไม่ได้</td></tr>
-        <tr><td class="baseline-cell">Search Recipes จากฐานข้อมูล</td><td class="winner-cell" data-win="ทางเลือกมากกว่า">ออกสูตรได้ 3 วิธี:</td><td class="empty-cell">—</td></tr>
-        <tr><td class="muted-cell">—</td><td class="method-cell">— AI ประมวลผลข้อมูลสี</td><td class="empty-cell">—</td></tr>
-        <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก L*a*b*</td><td class="empty-cell">—</td></tr>
-        <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก % ที่วัด</td><td class="empty-cell">—</td></tr>
-        <tr><td class="cat">4. Auto Adjust</td><td class="muted-cell">—</td><td class="winner-cell" data-win="Auto">ปรับสูตรอัตโนมัติ ไม่ต้องใช้คน จนกว่าจะใกล้ Sample</td><td class="empty-cell">—</td></tr>
-        <tr><td class="cat">5. ต้นทุน</td><td class="muted-cell">—</td><td class="winner-cell cost-win" data-win="ลดต้นทุน">ต้นทุนลดลงจากเดิม</td><td class="empty-cell">—</td></tr>
-      </tbody>
-    </table>
+  <div class="scroll-shadow-wrap aos">
+    <div class="table-scroll-hint">
+      <span class="hint-icon">↔</span> เลื่อนเพื่อดูรายละเอียดตารางเพิ่มเติมได้
+    </div>
+    <div class="full-compare-table scroll-shadow-container">
+      <table class="cost-table" style="min-width:700px;">
+        <thead>
+          <tr><th>หัวข้อ</th><th class="dc-col">Datacolor Spectro</th><th class="eli-col">Elicolor — ข้อดี</th><th style="color:var(--accent-red)">Elicolor — ข้อเสีย</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cat" rowspan="3">1. การ Calibrate</td><td class="baseline-cell">เชื่อมต่อผ่าน LAN วงใน ไม่ใช้อินเตอร์เน็ต</td><td class="tradeoff-cell" data-win="Cloud">เชื่อมต่อผ่าน Cloud ใช้อินเตอร์เน็ต</td><td class="risk-cell">ต้องเชื่อมต่อผ่านอินเตอร์เน็ต</td></tr>
+          <tr><td class="baseline-cell">Calibrate 1 ครั้ง ใช้ได้ 8 ชม.</td><td class="winner-cell" data-win="ใช้งานได้นานกว่า">Calibrate 1 ครั้ง ใช้ได้ตลอด จนกว่าเครื่องจะร้อน</td><td class="risk-cell">มีค่าใช้จ่าย Cloud</td></tr>
+          <tr><td class="baseline-cell">อุปกรณ์แยกจากตัวเครื่อง</td><td class="winner-cell" data-win="สะดวกกว่า">อุปกรณ์ติดกับตัวเครื่อง สะดวก</td><td class="risk-cell">ต้องอยู่ในห้องที่เย็น ไม่ร้อน</td></tr>
+          <tr><td class="cat" rowspan="2">2. Database สี</td><td class="baseline-cell">สร้าง 1 สี ต้องใช้ 10 เฉดสี</td><td class="winner-cell" data-win="ลดงาน 70%">สร้าง 1 สี ใช้เพียง 3 เฉด ลดงานอีก 7 เฉด</td><td class="empty-cell">—</td></tr>
+          <tr><td class="baseline-cell">กรอกข้อมูลแยกแต่ละเมนู</td><td class="winner-cell" data-win="ลดความซับซ้อน">ลดการกรอกข้อมูลซับซ้อน สะดวก</td><td class="empty-cell">—</td></tr>
+          <tr><td class="cat" rowspan="5">3. Matching</td><td class="baseline-cell">ออกสูตรจาก Database</td><td class="winner-cell" data-win="AI ช่วยคิดสูตร">ใช้ระบบ AI ช่วยออกสูตรสี</td><td class="risk-cell">สีด้ายที่ Oil ยังปรับไม่ได้</td></tr>
+          <tr><td class="baseline-cell">Search Recipes จากฐานข้อมูล</td><td class="winner-cell" data-win="ทางเลือกมากกว่า">ออกสูตรได้ 3 วิธี:</td><td class="empty-cell">—</td></tr>
+          <tr><td class="muted-cell">—</td><td class="method-cell">— AI ประมวลผลข้อมูลสี</td><td class="empty-cell">—</td></tr>
+          <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก L*a*b*</td><td class="empty-cell">—</td></tr>
+          <tr><td class="muted-cell">—</td><td class="method-cell">— ปรับจาก % ที่วัด</td><td class="empty-cell">—</td></tr>
+          <tr><td class="cat">4. Auto Adjust</td><td class="muted-cell">—</td><td class="winner-cell" data-win="Auto">ปรับสูตรอัตโนมัติ ไม่ต้องใช้คน จนกว่าจะใกล้ Sample</td><td class="empty-cell">—</td></tr>
+          <tr><td class="cat">5. ต้นทุน</td><td class="muted-cell">—</td><td class="winner-cell cost-win" data-win="ลดต้นทุน">ต้นทุนลดลงจากเดิม</td><td class="empty-cell">—</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="pros-cons-grid aos" style="margin-top:3rem;">
@@ -237,25 +262,30 @@
     <div class="stat-card"><div class="stat-value">25%</div><div class="stat-label">ลดน้ำ (650 ml)</div></div>
   </div>
 
-  <div class="cost-table-wrap aos">
-    <table class="cost-table">
-      <thead>
-        <tr>
-          <th colspan="2">รายละเอียด</th>
-          <th class="dc-col">Datacolor (4 สูตร/สี)</th>
-          <th class="dc-col">ปริมาณรวม</th>
-          <th class="eli-col">Elicolor (3 สูตร/สี)</th>
-          <th class="eli-col">ปริมาณรวม</th>
-          <th class="save-col">ลดลง</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="cat" rowspan="2">วัตถุดิบ</td><td>สี</td><td>0.6 g / สูตร</td><td>2.4 กรัม</td><td>0.6 g / สูตร</td><td>1.8 กรัม</td><td><span class="save-badge">▼ 0.6 กรัม</span></td></tr>
-        <tr><td>เส้นด้าย</td><td>30 g / สูตร</td><td>120 กรัม</td><td>30 g / สูตร</td><td>90 กรัม</td><td><span class="save-badge">▼ 30 กรัม</span></td></tr>
-        <tr><td class="cat" rowspan="2">พลังงาน</td><td>เวลา</td><td>240 นาที / สูตร</td><td>960 นาที</td><td>240 นาที / สูตร</td><td>720 นาที</td><td><span class="save-badge">▼ 240 นาที</span></td></tr>
-        <tr><td>น้ำ</td><td>650 ml / สูตร</td><td>2,600 ml</td><td>650 ml / สูตร</td><td>1,950 ml</td><td><span class="save-badge">▼ 650 ml</span></td></tr>
-      </tbody>
-    </table>
+  <div class="scroll-shadow-wrap aos">
+    <div class="table-scroll-hint">
+      <span class="hint-icon">↔</span> เลื่อนเพื่อดูรายละเอียดตารางเพิ่มเติมได้
+    </div>
+    <div class="cost-table-wrap scroll-shadow-container">
+      <table class="cost-table" style="min-width:700px;">
+        <thead>
+          <tr>
+            <th colspan="2">รายละเอียด</th>
+            <th class="dc-col">Datacolor (4 สูตร/สี)</th>
+            <th class="dc-col">ปริมาณรวม</th>
+            <th class="eli-col">Elicolor (3 สูตร/สี)</th>
+            <th class="eli-col">ปริมาณรวม</th>
+            <th class="save-col">ลดลง</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cat" rowspan="2">วัตถุดิบ</td><td>สี</td><td>0.6 g / สูตร</td><td>2.4 กรัม</td><td>0.6 g / สูตร</td><td>1.8 กรัม</td><td><span class="save-badge">▼ 0.6 กรัม</span></td></tr>
+          <tr><td>เส้นด้าย</td><td>30 g / สูตร</td><td>120 กรัม</td><td>30 g / สูตร</td><td>90 กรัม</td><td><span class="save-badge">▼ 30 กรัม</span></td></tr>
+          <tr><td class="cat" rowspan="2">พลังงาน</td><td>เวลา</td><td>240 นาที / สูตร</td><td>960 นาที</td><td>240 นาที / สูตร</td><td>720 นาที</td><td><span class="save-badge">▼ 240 นาที</span></td></tr>
+          <tr><td>น้ำ</td><td>650 ml / สูตร</td><td>2,600 ml</td><td>650 ml / สูตร</td><td>1,950 ml</td><td><span class="save-badge">▼ 650 ml</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:1rem;">* คิดคำนวณเฉลี่ยจากงานทดลองออกสูตร 20 รายการ</p>
 </section>
@@ -277,6 +307,9 @@
     </div>
     <div class="verdict-recommend">
       <strong>คำแนะนำ:</strong> เหมาะสำหรับนำมาใช้เพิ่มเติมจากระบบเดิม เพื่อเพิ่มประสิทธิภาพและลดต้นทุนในกระบวนการย้อมสี โดยมีข้อควรพิจารณาเรื่องการเชื่อมต่ออินเตอร์เน็ตและค่า Cloud
+    </div>
+    <div class="verdict-suggestion">
+      <strong>ข้อเสนอแนะในการพัฒนาเพิ่มเติม:</strong> จากการทดลอง ใช้เครื่อง Elicolor สามารถปรับให้ใกล้เคียงกับ sample ก่อน oil ได้ แต่ยังไม่สามารถปรับหลัง oil ต้องใช้สายตาปรับเพิ่มเติม
     </div>
   </div>
 </section>
@@ -413,6 +446,75 @@ const listObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 document.querySelectorAll('.pc-card').forEach(el => listObs.observe(el));
+
+// === Mobile Segmented Switchers & Scroll Snapping ===
+document.querySelectorAll('.system-switcher').forEach(switcher => {
+  const container = switcher.nextElementSibling;
+  if (!container || !container.classList.contains('vs-container')) return;
+  
+  const buttons = switcher.querySelectorAll('.switcher-btn');
+  const slider = switcher.querySelector('.switcher-slider');
+  
+  const updateSlider = (activeBtn) => {
+    slider.style.width = activeBtn.offsetWidth + 'px';
+    slider.style.left = activeBtn.offsetLeft + 'px';
+  };
+  
+  // Set initial slider position
+  if (buttons.length > 0) {
+    setTimeout(() => updateSlider(buttons[0]), 150);
+  }
+  
+  buttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      switcher.dataset.active = index;
+      updateSlider(btn);
+      
+      const panels = container.querySelectorAll('.vs-panel');
+      if (panels[index]) {
+        container.scrollTo({
+          left: panels[index].offsetLeft - container.offsetLeft,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Track scrolling to sync tabs automatically
+  let scrollTimeout;
+  container.addEventListener('scroll', () => {
+    if (window.innerWidth > 900) return;
+    
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollWidth = container.clientWidth;
+      if (scrollWidth <= 0) return;
+      const scrollLeft = container.scrollLeft;
+      const index = Math.round(scrollLeft / scrollWidth);
+      
+      if (buttons[index] && !buttons[index].classList.contains('active')) {
+        buttons.forEach(b => b.classList.remove('active'));
+        buttons[index].classList.add('active');
+        switcher.dataset.active = index;
+        updateSlider(buttons[index]);
+      }
+    }, 50);
+  });
+  
+  // Track resize to ensure slider alignment remains correct
+  window.addEventListener('resize', () => {
+    const activeBtn = switcher.querySelector('.switcher-btn.active');
+    if (activeBtn) updateSlider(activeBtn);
+  });
+  
+  // Sync slider on DOMContentLoaded and theme transitions
+  window.addEventListener('load', () => {
+    const activeBtn = switcher.querySelector('.switcher-btn.active');
+    if (activeBtn) updateSlider(activeBtn);
+  });
+});
 </script>
 </body>
 </html>
